@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- simbolos, acentos del español. Sin el no se verian. -->
+    <meta charset="UTF-8">
+    <!-- contenido de manera proporcional (responsive) en disp. mobiles -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- info web site  -->
+    <title>Nounous Niñeras</title>
+    <link rel="icon" href="./img/logo_ico.ico">
+    <meta name="description" content="Página web de servicios de niñeras en Chihuahua Chihuahua"> 
+
+    <!-- estilos  -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--! Cabezera y portada principal -->
+    <header class="header">
+        <div class="contenedor">
+            <div class="barra">
+
+                <!--!   Logo -->
+                <a class="logo" href="index.html">
+                    <img class="logo__img" src="./img/logo.png" alt="logo">
+                </a>
+                
+                <!--!  Barra de navegacion-->
+                <nav class="navegacion">
+                    <a href="index.html" class="navegacion__enlace">Inicio</a>
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="servicios.html" class="navegacion__enlace">Servicios</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                </nav>
+
+            </div>
+        </div>
+
+        <!--! Titular del sitio web -->
+        <div class="header__texto">
+            <h2 class="no-margin">Tus hijos en manos de profesionales</h2>
+            <p class="no-margin"> 24/7 cuidando lo más valioso de las familias de Chihuahua</p>
+        </div>
+    </header>
+
+
+    <!--! Contanido principal CONTACTO -->
+    <main class="contenedor">
+        <!-- Titulo -->
+        <h3 class="centrar-texto">CONTACTO</h3>
+        
+        <!-- Contenido -->
+        <div class="contacto-bg"></div>
+        
+        <form class="formulario">
+            <div class="campo">
+                <label class="campo__label" for="nombre">Nombre:</label>
+                <input class="campo__field" id="nombre" type="text" placeholder="Tu Nombre">
+            </div>
+
+            <div class="campo">
+                <label class="campo__label" for="email">E-mail:</label>
+                <input class="campo__field" id="email" type="email" placeholder="Tu E-mail">
+            </div>
+
+            <div class="campo">
+                <label class="campo__label" for="mensaje">Mensaje:</label>
+                <textarea class="campo__field campo__field--textarea" id="mensaje" ></textarea>
+            </div>
+
+            <div class="campo">
+                <input type="submit" value="Enviar" class="boton boton--primario">
+            </div>
+        </form>
+
+
+        
+        
+    </main>
+
+
+    <!--! Barra de navegacion en el Footer -->
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="barra">
+
+                <!--!   Logo -->
+                <a class="logo" href="index.html">
+                    <img class="logo__img" src="./img/logo.png" alt="logo">
+                </a>
+                
+                <!--!  Barra de navegacion-->
+                <nav class="navegacion">
+                    <a href="index.html" class="navegacion__enlace">Inicio</a>
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="servicios.html" class="navegacion__enlace">Servicios</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                </nav>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Se agrega para poder decidir con el banner en CSS cuando escojer entre webp ó no webp -->
+    <script src="js/modernizr.js"></script>
+</body>
+</html>

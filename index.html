@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- simbolos, acentos del español. Sin el no se verian. -->
+    <meta charset="UTF-8">
+    <!-- contenido de manera proporcional (responsive) en disp. mobiles -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+    <!-- info web site  -->
+     <title>Nounous Niñeras</title>
+     <link rel="icon" href="./img/logo_ico.ico">
+     <meta name="description" content="Página web de servicios de niñeras en Chihuahua Chihuahua"> 
+ 
+     <!-- estilos  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <!-- Prefetch: Carga la siguiente página a la que el usuario iría -->
+    <link rel="Prefetch" href="nosotros.html" as="document">
+
+
+    <!-- Preload: Carga algunos elementos necesarios cargarlos inmediatamente -->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="./css/normalize.css">
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" crossorigin="crossorigin" as="font">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <!--! Cabezera y portada principal -->
+    <header class="header">
+        <div class="contenedor">
+            <div class="barra">
+
+                <!--!   Logo -->
+                <a class="logo" href="index.html">
+                    <img class="logo__img" src="./img/logo.png" alt="logo">
+                </a>
+                
+                <!--!  Barra de navegacion-->
+                <nav class="navegacion">
+                    <a href="index.html" class="navegacion__enlace">Inicio</a>
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="servicios.html" class="navegacion__enlace">servicios</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                </nav>
+
+            </div>
+        </div>
+
+        <!--! Titular del sitio web -->
+        <div class="header__texto">
+            <h2 class="no-margin">Tus hijos en manos de profesionales</h2>
+            <p class="no-margin"> 24/7 cuidando lo más valioso de las familias de Chihuahua</p>
+        </div>
+    </header>
+
+
+    <!--! Contanido principal del sitio web -->
+    <div class="contenedor contenido-principal">
+        <main class="blog">
+            <!-- Titulo -->
+            <h3>Nuestro Blog</h3>
+
+            <!-- Contenido -->
+            <!--! 1er entrada  -->
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog1.webp" type="image/webp">
+                        <img loading="lazy" src="img/blog1.jpg" alt="imagen blog">
+                    </picture>
+                </div>
+
+                <div class="entrada__contenido">
+                    <h4>Tipos de Grano de Café</h4>
+                    <p>Integer tristique eu augue ac ullamcorper. Nam feugiat laoreet fringilla. Donec volutpat lorem hendrerit, sodales diam at, molestie diam. Aliquam luctus nisi massa, at ultricies lectus lacinia vel. Vestibulum non consectetur lorem, eu auctor elit.</p>
+                    <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
+                </div>
+            </article>
+
+            <!--! 2da entrada -->
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog2.webp" type="image/webp">
+                        <img loading="lazy" src="img/blog2.jpg" alt="imagen blog">
+                    </picture>
+                </div>
+
+                <div class="entrada__contenido">
+                    <h4>3 Delicionsas Recetas de Café</h4>
+                    <p>Integer tristique eu augue ac ullamcorper. Nam feugiat laoreet fringilla. Donec volutpat lorem hendrerit, sodales diam at, molestie diam. Aliquam luctus nisi massa, at ultricies lectus lacinia vel. Vestibulum non consectetur lorem, eu auctor elit.</p>
+                    <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
+                </div>
+            </article>
+
+            <!--! 3er entrada -->
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog3.webp" type="image/webp">
+                        <img loading="lazy" src="img/blog3.jpg" alt="imagen blog">
+                    </picture>
+                </div>
+
+                <div class="entrada__contenido">
+                    <h4>Beneficios del Café</h4>
+                    <p>Integer tristique eu augue ac ullamcorper. Nam feugiat laoreet fringilla. Donec volutpat lorem hendrerit, sodales diam at, molestie diam. Aliquam luctus nisi massa, at ultricies lectus lacinia vel. Vestibulum non consectetur lorem, eu auctor elit.</p>
+                    <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
+                </div>
+            </article>
+        </main>
+
+
+        <!--! Barra lateral nuestros Cursos y Talleres -->
+        <aside class="sidebar">
+            <h3>Nuestros Cursos y Talleres</h3>
+
+            <ul class="cursos no-padding">
+                <li class="widget-curso">
+                    <h4 class="no-margin">Técnicas de extracción de café</h4>
+                    <p class="widget-curso__label">Precio:
+                        <span class="widget-curso__info">Gratis</span>
+                    </p>
+                    <p class="widget-curso__label">Cupo:
+                        <span class="widget-curso__info">20</span>
+                    </p>
+                    <a href="entrada.html" class="boton boton--secundario">Más información sobre nuestros cursos</a>
+                </li>
+
+
+                <li class="widget-curso">
+                    <h4 class="no-margin">4 Recetas de café para principiantes</h4>
+                    <p class="widget-curso__label">Precio:
+                        <span class="widget-curso__info">Gratis</span>
+                    </p>
+                    <p class="widget-curso__label">Cupo:
+                        <span class="widget-curso__info">20</span>
+                    </p>
+                    <a href="entrada.html" class="boton boton--secundario">Más información sobre nuestros cursos</a>
+                </li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="barra">
+
+                <!--!   Logo -->
+                <a class="logo" href="index.html">
+                    <img class="logo__img" src="./img/logo.png" alt="logo">
+                </a>
+                
+                <!--!  Barra de navegacion-->
+                <nav class="navegacion">
+                    <a href="index.html" class="navegacion__enlace">Inicio</a>
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="servicios.html" class="navegacion__enlace">Servicios</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                </nav>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Se agrega para poder decidir con el banner en CSS cuando escojer entre webp ó no webp -->
+    <script src="js/modernizr.js"></script>
+</body>
+</html>

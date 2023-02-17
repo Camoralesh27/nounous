@@ -1,0 +1,315 @@
+:root{
+    --fuenteHeading: 'Pt Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+
+    --primario: #784D3C;
+    --gris: #e1e1e1;
+    --blanco: #ffffff;
+    --negro: #000000;
+    --footer: rgb(101, 44, 77);
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /* Esto para que 1rem = 10px */
+}
+
+*,*:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2; /* interlineado */
+}
+
+/*! Globales */
+.contenedor{
+    max-width: 120rem;
+    width: 90%; /* Dar un margen al sitio  */
+    margin: 0 auto; /* centrar página auto sin flex */
+}
+
+a{
+    text-decoration: none; /* quitarle subrayado a los links */
+}
+
+h1, h2, h3, h4{
+    font-family: var(--fuenteHeading);
+    line-height: 1.2; /* Este es para el interlineado cuando la pantalla es más pequeña para que los títulos no se vean muy grandes. */
+}
+
+h1{
+    font-size: 4.8rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3.2rem;
+}
+h4{
+    font-size: 2.8rem;
+}
+
+img{
+    max-width: 100%; /* Esto hace que las imagenes de todo el sitio funcionen de manera responsiva, logrando que fluya la imagen en cualquier dispositivo. */
+}
+
+/*! Utilidades */
+.no-margin{
+    margin: 0;
+}
+
+.no-padding{
+    padding: 0;
+}
+
+.centrar-texto{
+    text-align: center;
+}
+
+/*! Header */
+/* Utilizamos "modernizr" para que si el navegador soporta webp utilize el banner webp, y si no soporta webp (cómo en safari), entonces que corra con jpg */
+
+.webp .header{
+    background-image: url(../img/banner.webp);
+}
+
+.no-webp .header{
+    background-image: url(../img/banner.jpg);
+}
+
+.header{
+    /* Lo movimos de aquí para poder decidir entre webp o no-webp con modernizr */
+    /* background-image: url(../img/banner.jpg); */
+    height: 60rem;
+    background-size: cover; /* que la imagen cubra toda el área en diferentes tamaños de pantalla */
+    background-repeat: no-repeat; /* que no repita la imagen */
+    background-position: center center; /* centrado horizontal, y centrado vertical para que al modificar la pantalla se mantenga la parte que queremos de la imagen. También se pueden porcentajes*/
+
+}
+/*! Texto principal de inicio*/
+.header__texto{
+    text-align: center;
+    color: var(--blanco);
+    margin-top: 5rem;
+}
+
+@media (min-width: 768px) {
+    .header__texto{
+        margin-top: 15rem;
+    }
+}
+
+.barra{
+    padding-top: 4rem;
+}
+
+/*! Pasicionando barra de navegacion y logo */
+@media (min-width:768px){
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/*! Logo texto  */
+.logo{
+    color: var(--blanco);
+    
+}
+
+.logo__img{
+    height: 11rem;
+}
+/*! Barra de navegacion  */
+@media (min-width: 768px) {
+    .navegacion{
+        display: flex;
+        /*gap: 2rem; */
+        /* Se puede usar gap para separar los enlaces de Nosotros, Cursos y Contacto pero preferí espararlos en .navegacion__enlace con un margin ya que el gap no me estaba respondiendo en safari y se quedaban pegadas los enlaces */
+    }
+}
+.navegacion__enlace{
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--blanco);
+    margin: 1rem;
+}
+
+/*! Contenido principal, blog y sidebar */
+@media (min-width: 768px) {
+    .contenido-principal{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+    }
+    
+}
+
+.entrada{
+    border-bottom: 10px solid var(--gris) ;
+    margin-bottom: 2rem;
+}
+.entrada:last-of-type{
+    border: none;
+    margin-bottom: 0;
+}
+
+.boton{
+    display: block;
+    font-family: var(--fuenteHeading);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border: none;
+
+}
+
+@media (min-width: 768px) {
+    .boton{
+        display: inline-block;
+    }
+}
+
+/* Este sirve para que cuando pones el cursor, cambie la apariencia del cursor para enviarte a un link.*/
+.boton:hover{ 
+    cursor: pointer;
+}
+
+.boton--primario{
+    background-color: var(--negro);
+}
+.boton--secundario{
+    background-color: var(--primario);
+}
+
+.cursos{
+    list-style: none;
+}
+.widget-curso{
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 2rem;
+}
+.widget-curso:last-of-type{
+    border: none;
+    margin-bottom: 0;
+}
+
+.widget-curso__label{
+    font-family:var(--fuenteHeading);
+    font-weight: bold;
+}
+.widget-curso__info{
+    font-weight: normal;
+}
+
+.widget-curso__label,
+.widget-curso__info{
+    font-size: 2rem;
+}
+
+.footer{
+    background-color: var(--footer);
+    padding-bottom: 3rem;
+    margin-top: 4rem;
+}
+
+/*! Sobre Nosotros */
+@media (min-width: 768px) {
+    .sobre-nosotros{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+/* Es para centrar la imagen*/
+.sobre-nosotros__img{
+    display: flex;
+    justify-content: center;
+}
+
+/* agregar bordes y dimensión a la imagen */
+.sobre-nosotros__img1{
+    border: dashed .4rem black;
+    border-radius: 2rem;
+    height: 65rem;
+}
+
+/*! Curso */
+.curso{
+    padding: 3rem 0;
+    border-bottom: solid var(--gris);
+}
+
+@media (min-width: 768px) {
+    .curso{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+    
+}
+
+.curso:last-of-type {
+    border: none;
+}
+
+/* Esto podría ir con las etiquetas de arriba en widget para evitar duplicidad de código. Pero para no darle scrol para arriba lo puso aquí el profesor y yo lo puse por ordenar las cosas por secciones y recordar que perjudica a sección de: Curso. */
+.curso__label{
+    font-family:var(--fuenteHeading);
+    font-weight: bold;
+}
+.curso__info{
+    font-weight: normal;
+}
+.curso__label,
+.curso__info{
+    font-size: 2rem;
+}
+
+/*! Contacto  */
+.contacto-bg{
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.formulario{
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+}
+
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+
+}
+
+.campo__label{
+    flex: 0 0 9rem;
+    text-align: right;
+    padding-right: 2rem;
+}
+
+.campo__field{
+    flex: 1;
+    border: 1px solid var(--gris);
+}
+
+.campo__field--textarea{
+    height: 20rem;
+
+}
