@@ -84,7 +84,7 @@ img{
 .header{
     /* Lo movimos de aquí para poder decidir entre webp o no-webp con modernizr */
     /* background-image: url(../img/banner.jpg); */
-    height: 60rem;
+    height: 57rem;
     background-size: cover; /* que la imagen cubra toda el área en diferentes tamaños de pantalla */
     background-repeat: no-repeat; /* que no repita la imagen */
     background-position: center center; /* centrado horizontal, y centrado vertical para que al modificar la pantalla se mantenga la parte que queremos de la imagen. También se pueden porcentajes*/
