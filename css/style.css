@@ -73,11 +73,11 @@ img{
 /*! Header */
 /* Utilizamos "modernizr" para que si el navegador soporta webp utilize el banner webp, y si no soporta webp (cómo en safari), entonces que corra con jpg */
 
-.webp .header{
+/* .webp .header{
     background-image: url(../img/banner.webp);
 }
 
-.no-webp .header{
+.no-webp */ .header{
     background-image: url(../img/banner.jpg);
 }
 
