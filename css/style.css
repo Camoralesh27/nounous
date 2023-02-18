@@ -3,10 +3,11 @@
     --fuenteParrafos: 'Open Sans', sans-serif;
 
     --primario: #784D3C;
-    --gris: #e1e1e1;
+    --grisclaro: #ededed;
+    --gris: #c7c6c6;
     --blanco: #ffffff;
     --negro: #000000;
-    --footer: rgb(101, 44, 77);
+    --footer: rgb(64, 116, 127); 
 }
 
 html{
@@ -22,6 +23,7 @@ body{
     font-family: var(--fuenteParrafos);
     font-size: 1.6rem;
     line-height: 2; /* interlineado */
+    background-color: var(--grisclaro);
 }
 
 /*! Globales */
@@ -70,7 +72,16 @@ img{
     text-align: center;
 }
 
+
+
 /*! Header */
+
+/* todo: hacer responsivo */
+/*.sobre-barra{
+    background-color: var(--footer);
+    color: var(--blanco);
+}*/
+
 /* Utilizamos "modernizr" para que si el navegador soporta webp utilize el banner webp, y si no soporta webp (cómo en safari), entonces que corra con jpg */
 
 /* .webp .header{
@@ -220,7 +231,12 @@ img{
 .footer{
     background-color: var(--footer);
     padding-bottom: 3rem;
-    margin-top: 4rem;
+    margin-top: 3rem;
+}
+
+.footer_der{
+    text-align: center;
+    color: var(--gris);
 }
 
 /*! Sobre Nosotros */
@@ -311,5 +327,5 @@ img{
 
 .campo__field--textarea{
     height: 20rem;
-
 }
+
