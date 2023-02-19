@@ -72,15 +72,63 @@ img{
     text-align: center;
 }
 
-
+/*! iconos google */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
 
 /*! Header */
 
 /* todo: hacer responsivo */
-/*.sobre-barra{
-    background-color: var(--footer);
+.sobre-barra{
+    background: linear-gradient(70deg, rgba(91, 185, 185, 0.38), rgba(152, 148, 148, 0.38)) ;
     color: var(--blanco);
-}*/
+    font-weight: 700;
+    padding: .5rem 0;
+}
+.sobre-barra__int{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 17rem;
+}
+
+.sobre-barra__contact{
+    display: flex; 
+    justify-content: space-between;
+    width:40rem;
+}
+.sobre-barra__contact p{
+   display: flex;
+   align-items: center;
+}
+
+.sobre-barra__red-social{
+    display: flex;
+    width: 40rem;
+    justify-content: end;
+    align-items: center;
+}
+.sobre-barra__red-social img{
+    width: 2rem;
+    margin: 0 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .sobre-barra__int{
+        margin: 0 6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .sobre-barra__int{
+        margin: 0 auto;
+        font-size: 1.3rem;
+    }
+}
 
 /* Utilizamos "modernizr" para que si el navegador soporta webp utilize el banner webp, y si no soporta webp (cómo en safari), entonces que corra con jpg */
 
@@ -115,7 +163,7 @@ img{
 }
 
 .barra{
-    padding-top: 4rem;
+    padding-top: 1.5rem;
 }
 
 /*! Pasicionando barra de navegacion y logo */
@@ -150,6 +198,10 @@ img{
     font-size: 1.8rem;
     color: var(--blanco);
     margin: 1rem;
+}
+
+@media (max-width: 767px) {
+    
 }
 
 /*! Contenido principal, blog y sidebar */
